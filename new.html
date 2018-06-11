@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>新規リマインド登録</title>
+  <meta charset="UTF-8">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <h1>新規登録</h1>
+  
+  <!-- 登録項目作成 -->
+<form method="post" th:action="@{/post}">
+
+  <p>登録サイト</p>
+	<textarea name="s_name" cols="40" rows="1" style="overflow:auto" placeholder="登録サイト名"></textarea><br>
+  
+  <p>登録日</p>
+  <input name="r_date" type="date">
+
+  <p>無料期間終了日</p>
+  <input name="t_period" type="date">
+
+  <p>登録したメールアドレス</p>
+	<textarea name="mailaddress" cols="40" rows="1" style="overflow:auto" placeholder="メールアドレス"></textarea><br>
+  
+	<p>カードブランド</p>
+  <div>
+  <input name="card_bra" type="radio" value="VISA"> VISA
+	<input name="card_bra" type="radio" value="Master Card"> Master Card
+	<input name="card_bra" type="radio" value="JCB"> JCB<br>
+	<input name="card_bra" type="radio" value="American Express"> American Express
+	<input name="card_bra" type="radio" value="Diners Club"> Diners Club 
+	<input name="card_bra" type="radio" value="DISCOVER"> DISCOVER
+	<input name="card_bra" type="radio" value="銀聯"> 銀聯
+	</div>
+	
+  <p>カード番号</p>
+	<textarea name="card_num" cols="40" rows="1" style="overflow:auto" placeholder="カード番号"></textarea><br>
+  
+  <p>ID(別途設定した場合)</p>
+	<textarea name="s_id" cols="40" rows="1" style="overflow:auto" placeholder="ID"></textarea><br>
+  
+  <p>パスワード</p>
+	<textarea name="password" cols="40" rows="1" style="overflow:auto" placeholder="パスワード"></textarea><br>
+  
+  <p>備考(200文字まで)</p>
+  <textarea name="other" cols="40" rows="5" style="overflow:auto" placeholder="その他メモなど"></textarea><br>
+
+  <br>
+  <input type="submit" value="登録">
+  
+</form>
+
+  
+</body>
+</html>
