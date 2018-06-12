@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>詳細</title>
+  <meta charset="UTF-8">
+  
+      <!-- CSS -->
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <h1>詳細</h1>
+  
+<table class="detail" border="5">
+<tr>
+<th class="detailth">メールアドレス</th>
+<th class="detailth">カードブランド</th>
+<th class="detailth">カード番号</th>
+</tr>
+<tr th:text ="service:${data}">
+<td class="detailtd"><span th:text="${service.mailaddress}">ここにメアドが入ります</span></td>
+<td class="detailtd"><span th:text="${service.card_bra}">ここにカードブランドが入ります</span></td>
+<td class="detailtd"><span th:text="${service.card_num}">ここにカード番号が入ります</span></td>
+</tr>
+</table>
+<br>
+
+<table border="5">
+<tr>
+<th class="detailth">ID</th>
+<th class="detailth">パスワード</th>
+<th class="detailth">備考</th>
+</tr>
+<tr th:text ="service:${data}">
+<td class="detailtd"><span th:text="${service.s_id}">ここにIDが入ります</span></td>
+<td class="detailtd"><span th:text="${service.password}">ここにパスワードが入ります</span></td>
+<td class="detailtd bikou"><span th:text="${service.other}">メモなどが入ります</span></td>
+</tr>
+</table>
+
+
+  <a class="button" href = "list" >・一覧へ</a><br>
+  <a class="button" href = "top" >・TOPへ</a><br>
+</body>
+</html>
