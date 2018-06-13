@@ -1,0 +1,100 @@
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Spring Boot Sample Site</title>
+</head>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-
+Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<body>
+<!-- <ul>
+  <li>「私の名前は、<span th:text="${name}">なかやま</span>です。」 </li>
+  <li><span th:text="${age}">20</span>才です。 </li>
+</ul> -->
+
+
+<ul>
+<div th:each = "DBTest:${people}">
+  <li>「私の名前は、<span th:text="${DBTest.name}">なかやま</span> </li>
+  <li><span text="test2" th:text="${DBTest.age}">20</span>才です。 </li>
+  <li><span text="test1" th:text="${DBTest.age}">20</span>才。 </li>
+</div>
+</ul>
+
+<!-- <span text="text1" th:text="${name}">test1</span>
+<span text="text2" th:text="${age}">test2</span> -->
+
+<p text="test" th:text="${name}">test</p>
+
+<form method="get" th:action="@{/test}">
+  <input type="text" name="name" placeholder="名前" />
+  <input type="text" name="age" placeholder="年齢" />
+  <input type="submit" />
+</form>
+
+<form method="post" th:action="@{/post}">
+  <input type="text" name="name" placeholder="名前" />
+  <input type="text" name="age" placeholder="年齢" />
+  <input type="submit" />
+</form>
+
+
+
+
+
+
+
+<!--ワイングラス表示-->
+<span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
+
+<!--音符表示 -->
+<span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+
+
+<header style="background-color:gray">Header</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3" style="background-color:red;">Red</div>
+    <div class="col-sm-5" style="background-color:blue;">Blue</div>
+    <div class="col-sm-4" style="background-color:yellow;">Yellow</div></div>
+</div>
+<footer style="background-color:gray">Footer</footer>
+
+<div class="form-group"> 
+<label for="InputEmail">メール・アドレス</label> 
+<input type="email" class="form-control" id="InputEmail" placeholder="メール・アドレスを入力して下さい。">
+ </div> 
+
+<div class="form-group"> 
+<label for="InputPassword">パスワード</label> 
+<input type="password" class="form-control" id="InputPassword" placeholder="パスワードを入力して下さい。"> </div> 
+
+<div class="form-group"> 
+<label for="InputTextarea">要件</label> 
+<textarea class="form-control" id="InputTextarea" placeholder="要件を入力して下さい。">
+</textarea> 
+</div> 
+
+<div class="form-group"> 
+<label for="InputSelect">選択</label> 
+<select class="form-control" id="InputSelect"> 
+<option>選択肢１</option> 
+<option>選択肢２</option> 
+<option>選択肢３</option>
+ </select> 
+ <input class="btn btn-warning" type="submit" value="ログイン"/>
+ 
+</div>
+
+
+
+</body>
+</html>

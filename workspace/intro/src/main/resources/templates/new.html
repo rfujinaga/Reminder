@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>新規リマインド登録</title>
+  <meta charset="UTF-8">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <h1>新規登録</h1>
+  
+  
+  <!-- 登録項目作成 -->
+<form method="post" th:action="@{/post}">
+
+  <p>登録サイト</p>
+	<textarea name="name" cols="40" rows="1" style="overflow:auto" placeholder="登録サイト名"></textarea><br>
+  
+  <!-- <p>登録日</p>
+	<textarea name="name" cols="40" rows="1" style="overflow:auto" placeholder="登録日"></textarea><br> -->
+  
+  <p>登録日</p>
+  <input type="date" name="example">
+  
+  <!-- <p>無料期間</p>
+	<textarea name="name" cols="40" rows="1" style="overflow:auto" placeholder="無料期間"></textarea><br> -->
+
+  <p>無料期間</p>
+  <input type="date" name="example">
+
+  <p>登録したメールアドレス</p>
+	<textarea name="name" cols="40" rows="1" style="overflow:auto" placeholder="メールアドレス"></textarea><br>
+  
+  <p>カードブランド</p>
+  <div>
+  <input type="radio" name="q1" value="VISA"> VISA
+	<input type="radio" name="q1" value="Master Card"> Master Card
+	<input type="radio" name="q1" value="JCB"> JCB<br>
+	<input type="radio" name="q1" value="American Express"> American Express
+	<input type="radio" name="q1" value="Diners Club"> Diners Club 
+	<input type="radio" name="q1" value="DISCOVER"> DISCOVER
+	<input type="radio" name="q1" value="銀聯"> 銀聯
+	</div>
+	
+  <p>カード番号</p>
+	<textarea name="name" cols="40" rows="1" style="overflow:auto" placeholder="カード番号"></textarea><br>
+  
+  <p>ID(別途設定した場合)</p>
+	<textarea name="name" cols="40" rows="1" style="overflow:auto" placeholder="ID"></textarea><br>
+  
+  <p>パスワード</p>
+	<textarea name="name" cols="40" rows="1" style="overflow:auto" placeholder="パスワード"></textarea><br>
+  
+  <p>備考(200文字まで)</p>
+  <textarea name="name" cols="40" rows="5" style="overflow:auto" placeholder="その他メモなど"></textarea><br>
+
+</form>
+
+  <br>
+  <input type="submit" value="登録">
+  
+</body>
+</html>
